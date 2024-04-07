@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const morgan = require('morgan')
 const users = require('./controller/users')
 const skill = require('./controller/skill')
 const school = require('./controller/school')
@@ -12,7 +11,6 @@ const port = 3000
 app.use(cors({
     origin: '*'
 }));
-app.use(morgan('tiny'))
 
 app.listen(port, () => {
     console.log(`app listening on port 3000`)
