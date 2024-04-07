@@ -8,9 +8,7 @@ const certificate = require('./controller/certificate')
 
 const port = 3000
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
