@@ -1,4 +1,4 @@
-const tb = "certificate";
+const tb = "student";
 
 /**
  * @param { import("knex").Knex } knex
@@ -15,8 +15,9 @@ async function createData() {
   let data = [];
   for (let i = 1; i <= 10; i++) {
     const obj = {
-      certificate_id: `${i}`,
-      certificatename: `AWS-${i}`,
+      id: `${i}`,
+      name: `student${i}`,
+      introduce: "This student is too lazy",
     };
     data.push(obj);
   }

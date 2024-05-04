@@ -1,13 +1,13 @@
-const tb = 'profile_img'
+const tb = 'student'
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
     return knex.schema.createTable(tb, (table) => {
-        table.integer('student_id');
-        table.foreign('student_id').references('student.id').onDelete('SET NULL');
-        table.string('img_path');
+        table.increments('id');
+        table.string('name');
+        table.string('introduce', 255);
     });
 };
 

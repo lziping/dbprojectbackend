@@ -1,8 +1,8 @@
-const tb = 'skill';
+const tb = "skill";
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
+ * @returns { Promise<void> }
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
@@ -12,13 +12,13 @@ exports.seed = async function (knex) {
 };
 
 async function createData() {
-  let data = []
-  for (let i = 1; i <= 50; i++) {
+  let data = [];
+  for (let i = 1; i <= 10; i++) {
     const obj = {
-      'skill_id': `${i}`,
-      'skillname': `some-skill-${i}`,
-    }
-    data.push(obj)
+      skill_id: `${i}`,
+      skillname: `SQL-${i}`,
+    };
+    data.push(obj);
   }
-  return data
+  return data;
 }

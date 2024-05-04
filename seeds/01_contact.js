@@ -1,8 +1,9 @@
-const tb = "certificate";
+
+const tb = 'contact';
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
+ * @returns { Promise<void> } 
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
@@ -12,13 +13,14 @@ exports.seed = async function (knex) {
 };
 
 async function createData() {
-  let data = [];
+  let data = []
   for (let i = 1; i <= 10; i++) {
     const obj = {
-      certificate_id: `${i}`,
-      certificatename: `AWS-${i}`,
-    };
-    data.push(obj);
+      'student_id': `${i}`,
+      'email': `${i}@nyu.edu`,
+      'phone': `1234567890`,
+    }
+    data.push(obj)
   }
-  return data;
+  return data
 }

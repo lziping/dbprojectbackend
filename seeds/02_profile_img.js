@@ -13,10 +13,9 @@ exports.seed = async function (knex) {
 
 async function createData() {
   let data = []
-  for (let i = 1; i <= 50; i++) {
+  for (let i = 1; i <= 10; i++) {
     const obj = {
-      'id': `${i}`,
-      'user_id': `${i}`,
+      'student_id': `${i}`,
       'img_path': `https://images.unsplash.com/photo-1689465572111-9af2f5a02786?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
     }
     data.push(obj)
